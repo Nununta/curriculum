@@ -1,0 +1,45 @@
+@media screen and (max-width: 479px) {
+    .wrapper{
+        width: 200px;
+    }
+
+    .header {
+        height: 200px;
+    }
+
+    .header-box{
+        background-color: white;
+        top: 20px;
+        left: 70px;
+        height: 160px;
+        width: 60px;
+    }
+
+    .box-menu{
+        float: none;        
+        margin: 10px 10px 0px 10px;
+        height: 40px;
+        width: 40px;
+        padding-top: 10px;
+    }
+
+    .left {
+        float: none;
+        width: 200px;
+        height: 100px;
+    }
+
+    .right {
+        float: none;
+        width: 200px;
+        height: 160px;
+        padding: 20px 30px;
+    }
+
+    .right-box {
+        height: 30px;
+        border: 5px solid white;
+        margin-bottom: 10px;
+    }
+
+}
