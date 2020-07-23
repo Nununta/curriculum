@@ -9,15 +9,20 @@
 <body>
     <div class="wrapper">
         <div class="header">1</div>
-        <div class="container">
-            <div class="left">2</div>
-            <div class="left-bottom">3</div>
-            <div class="center-top">4</div>
-            <div class="center-bottom">5</div>
+        <div class="container clearfix">
+            <div class="left">
+                <div class="left-top clearfix">
+                    <div class="left-top-left">2</div>
+                    <div class="left-top-right">
+                        <div class="left-upper">3</div>
+                        <div class="left-lower">4</div>
+                    </div>
+                </div>
+                <div class="left-bottom">5</div>
+            </div>
             <div class="right">6</div>
         </div>
         <div class="footer">7</div>
     </div>
-    
 </body>
 </html>
