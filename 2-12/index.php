@@ -8,11 +8,11 @@
 <br>
 個数：
 <select name="quantity">
-<?php for($i=1; $i<=10; $i++) { ?>
+<?php for($i=1; $i<=10; $i++):?>
 <option value="<?php echo $i; ?>">
 <?php echo $i; ?>
 </option>
-<?php } ?>
+<?php endfor ?>
 </select>
 <br>
 <input type="submit" value="申込">
