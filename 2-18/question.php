@@ -19,22 +19,27 @@ $answer_3 = $questions_3[1];
 <h2>①ネットワークのポート番号は何番？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
 <?php foreach($questions_1 as $value): ?>
-    <input type="radio" name="port_number" value="<?php $value ?>"><?php echo $value; ?>
+    <input type="radio" name="port_number" value="<?php echo $value; ?>"><?php echo $value; ?>
 <?php endforeach ?>
 
 <h2>②Webページを作成するための言語は？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
 <?php foreach($questions_2 as $value): ?>
-    <input type="radio" name="language" value="<?php $value ?>"><?php echo $value; ?>
+    <input type="radio" name="language" value="<?= $value ?>"><?php echo $value; ?>
 <?php endforeach ?>
 
 <h2>③MySQLで情報を取得するためのコマンドは？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
 <?php foreach($questions_3 as $value): ?>
-    <input type="radio" name="sql" value="<?php $value ?>"><?php echo $value; ?>
+    <input type="radio" name="sql" value="<?= $value ?>"><?php echo $value; ?>
 <?php endforeach ?>
 
 <!--問題の正解の変数と名前の変数を[answer.php]に送る-->
 <br>
+<input type="hidden" name="$my_name" value="<?= $my_name ?>">
+<input type="hidden" name="$answer_1" value="<?= $answer_1 ?>">
+<input type="hidden" name="$answer_2" value="<?= $answer_2 ?>">
+<input type="hidden" name="$answer_3" value="<?= $answer_3 ?>">
+
 <input type="submit" value="回答する">
 </form>
