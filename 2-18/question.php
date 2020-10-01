@@ -13,6 +13,7 @@ $answer_3 = $questions_3[1];
 
 
 ?>
+
 <p>お疲れ様です<?php echo $my_name; ?>さん</p>
 <!--フォームの作成 通信はPOST通信で-->
 <form action="answer.php" method="post">

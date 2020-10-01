@@ -5,7 +5,7 @@ $my_name = $_POST['$my_name'];
 $port_number = $_POST['port_number'];
 $language = $_POST['language'];
 $sql = $_POST['sql'];
-
+    
 $answer_1 = $_POST['$answer_1'];
 $answer_2 = $_POST['$answer_2'];
 $answer_3 = $_POST['$answer_3'];
