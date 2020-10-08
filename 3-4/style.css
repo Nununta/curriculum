@@ -40,6 +40,16 @@ align-items: center;
     clear: both;
 }
 
+
+table th {
+    background-color: #87ceed;
+    
+}
+
+table td {
+    background-color: #e0ffff;
+}
+
 .main {
     margin-top: 10px;
     margin-bottom: 10px;

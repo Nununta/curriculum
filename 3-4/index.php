@@ -39,7 +39,7 @@ while($row = $posts->fetch(PDO::FETCH_ASSOC)) {
 <table border=1 align="center">
     <tbody>
         <tr>
-            <th>id</th>
+            <th>記事id</th>
             <th>タイトル</th>
             <th>カテゴリ</th>
             <th>本文</th>
@@ -47,21 +47,20 @@ while($row = $posts->fetch(PDO::FETCH_ASSOC)) {
         </tr>
         <?php foreach($rows as $row) :?>
             <tr>
-                <th><?= $row["id"]?></th>
-                <th><?= $row["title"]?></th>
+                <td><?= $row["id"]?></td>
+                <td><?= $row["title"]?></td>
 
-                <th><?php if($row["category_no"] ==1): ?>
+                <td><?php if($row["category_no"] ==1): ?>
                     <?php echo "食事"; ?>
                     <?php elseif($row["category_no"] ==2): ?>
                     <?php echo "旅行"; ?>
                     <?php else: ?>
                     <?php echo "その他"; ?>
                 <?php endif; ?>
-                </th>
+                </td>
 
-
-                <th><?= $row["comment"]?></th>
-                <th><?= $row["created"]?></th>
+                <td><?= $row["comment"]?></td>
+                <td><?= $row["created"]?></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
