@@ -1,5 +1,5 @@
 <?php
-define("DB_DATABASE","YIGroupBlog");
+define("DB_DATABASE","Book");
 define("DB_USERNAME","root");
 define("DB_PASSWORD","root");
 define("PDO_DSN","mysql:host=localhost;charset=utf8;dbname=".DB_DATABASE);
@@ -17,5 +17,3 @@ function db_connect(){
 }
 
 ?>
-
-
