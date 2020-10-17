@@ -1,29 +1,32 @@
 <?php
 require_once("db_connect.php");
 
-if(!empty($_POST["login_name"])) {
-    if(empty($_POST["login_pass"])){
+session_start();
+
+if(!empty($_POST)) {
+    if(empty($_POST["name"])){
         echo "名前が未入力です";
     }
+
     if(empty($_POST["pass"])){
         echo "パスワードが未入力です";
     }
-    if(!empty($_POST["login_name"]) && !empty($_POST["login_pass"])) {
+
+    if(!empty($_POST["name"]) && !empty($_POST["pass"])) {
+        $name = htmlspecialchars($_POST["name"], ENT_QUOTES);
+        $pass = htmlspecialchars($_POST["pass"], ENT_QUOTES);
         $pdo = db_connect();
-        $name = htmlspecialchars($_POST["login_name"], ENT_QUOTES);
-        $password = htmlspecialchars($_POST["login_pass"], ENT_QUOTES);
-        try {
+        try{
             $sql = "select * from users where name = :name";
             $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(":name", $name);
+            $stmt->bindParam(":name",$name);
             $stmt->execute();
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
             die();
         }
-      
         if($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            if(password_verify($password, $row["password"])) {
+            if(password_verify($pass, $row["password"])) {
                 $_SESSION["user_id"] = $row["id"];
                 $_SESSION["user_name"] = $row["name"];
                 header("Location: main.php");
@@ -34,28 +37,29 @@ if(!empty($_POST["login_name"])) {
     } else {
         echo "ユーザ名かパスワードに誤りがあります。";
         }
-        
-    } 
-}
-
+    }
+} 
 ?>
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン</title>
-</head>
-<body>
-<h1>ログイン画面</h1>
-<a href="signUp.php" class="signUp">新規ユーザ登録</a>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>ログインページ</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+            <h1 class="title_login">ログイン画面</h1>
+            <a href="signUp.php" class="btn--orange btn--shadow">新規ユーザ登録</a>
+            </div>
 
-<form action="post" method="">
-<input type="text" name="login_name" class="input_form" placeholder = "ユーザ名" >
-<input type="text" name="login_pass" class="input_form" placeholder = "ユーザ名" >
-<input type="submit" value = "ログイン" class="button" name = "login">
-</form>
-    
-</body>
+            <form method="post" action="">
+                <input class="inputs" type="text" name="name" placeholder="ユーザ名"><br>
+                <input class="inputs" type="text" name="pass" placeholder="パスワード"><br>
+                <input type="submit" value="ログイン" class="btn--blue btn--shadow" id="login">
+            </form>
+        </div>
+    </body>
 </html>

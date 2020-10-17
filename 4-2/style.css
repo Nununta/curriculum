@@ -1,0 +1,218 @@
+body{
+    width: 100%;
+    text-align: center;
+    margin:0 auto;
+}
+
+.container {
+    margin-top: 70px;
+}
+
+.inputs {
+    width: 450px;
+    height: 40px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* login.php用CSS */
+
+.title_login {
+    font-size: 40px;
+    display: inline-block;
+    position:relative;
+    right: 30px;
+}
+
+.btn--orange {
+    color: #fff;
+    background-color: #eb6100;
+    border-radius: 0.5rem;
+    border-bottom: 5px solid #b84c00;
+    padding: 15px 20px;
+    position:relative;
+    left: 30px;
+    bottom:10px;
+  }
+
+  .btn--blue {
+    color: #fff;
+    font-size: 20px;
+    background-color: blue;
+    border-radius: 0.5rem;
+    border-bottom: 5px solid navy;
+    padding: 10px 50px;
+  }
+
+  .btn--orange:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: #f56500;
+    border-bottom: 2px solid #b84c00;
+  }
+
+  .btn--blue:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: blue;
+    border-bottom: 2px solid navy;
+  }
+
+  .btn--shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  }
+
+  #login{
+    position:relative;
+    right: 140px;
+    
+  }
+    
+/* main.php用CSS */
+#title_main {
+    font-size: 50px;
+    position:relative;
+    right: 260px;
+}
+
+.btn--gray:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: gray;
+    border-bottom: 2px solid #555555;
+  }
+
+  .btn--gray {
+    color: #fff;
+    font-size: 20px;
+    background-color: gray;
+    border-radius: 0.5rem;
+    border-bottom: 5px solid #555555;
+    padding: 10px 20px;
+  }
+
+  #logout {
+    position:relative;
+    right: 240px;
+    bottom:20px;
+  }
+
+  .btn--green:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: green;
+    border-bottom: 2px solid #006600;
+  }
+
+  .btn--green {
+    color: #fff;
+    font-size: 20px;
+    background-color: green;
+    border-radius: 0.5rem;
+    border-bottom: 5px solid #006600;
+    padding: 10px 20px;
+  }
+
+  #new{
+    position:relative;
+    right: 270px;
+    bottom:20px;
+  }
+
+  table {
+    margin: 0 auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table th, table td {
+    border: solid 1px black;
+}
+
+table th {
+    background-color: #CCCCCC;
+    padding: 3px 50px;
+    font-size: 20px;
+}
+
+table td {
+    padding:10px 50px;
+    font-size: 20px;
+}
+
+.btn--red:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: red;
+    border-bottom: 2px solid #880000;
+  }
+
+  .btn--red {
+    color: #fff;
+    font-size: 20px;
+    background-color: red;
+    border-radius: 0.5rem;
+    border-bottom: 5px solid #880000;
+    padding: 5px 15px;
+  }
+
+
+/* create_book.php用CSS */
+
+.title_create {
+    font-size: 40px;
+    position:relative;
+    right: 120px;
+    bottom: 10px;
+}
+
+.item {
+    position:relative;
+    right: 200px;
+    top: 15px;
+    
+}
+
+#dropdown {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    position:relative;
+    right: 77px;
+    bottom: 27px;
+
+}
+
+#Registration {
+    padding: 10px 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}

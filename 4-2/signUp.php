@@ -1,5 +1,6 @@
 <?php
 require_once("db_connect.php");
+
 if(!empty($_POST["signup"])) {
     $name =htmlspecialchars($_POST["name"], ENT_QUOTES);
     $password = htmlspecialchars($_POST["password"], ENT_QUOTES);
@@ -32,18 +33,21 @@ if(!empty($_POST["signup"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <title>新規登録画面</title>
 </head>
 <body>
-<h1>ユーザ登録画面</h1>
-<form action="" method="post">
-<input type="text" name="name" class="name" placeholder = "ユーザ名" >
-<br>
-<input type="text" name="password" class="password" placeholder = "パスワード">
-<br>
-<input type="submit" value = "新規登録" class="button" name = "signup">
-</form>
+<div class="container">
+    <h1 class="title_login">ユーザ登録画面</h1>
+    <a href="login.php" class="btn--orange btn--shadow">ログイン画面</a>
+    <form action="" method="post">
+    <input type="text" name="name" class="inputs" placeholder = "ユーザ名" >
+    <br>
+    <input type="text" name="password" class="inputs" placeholder = "パスワード">
+    <br>
+    <input type="submit" value = "新規登録" class="btn--blue btn--shadow" name = "signup">
+    </form>
+</div>
     
 </body>
 </html>
